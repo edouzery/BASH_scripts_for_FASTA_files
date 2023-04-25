@@ -40,7 +40,7 @@ nbSeqLines=$(sed '/^$/d' $1 | grep -c -v '>') ;                 # Number of line
 
 if [ "$nbSeqLines" != "$nbSeq" ] ;
         then    printf "$boldRed \n Sorry ... Your FASTA file is not UNILINE ! \n\n$noColor" ;
-                        exit ;
+                exit ;
 fi ;
 
 
