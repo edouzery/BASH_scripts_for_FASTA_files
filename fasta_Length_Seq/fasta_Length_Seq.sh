@@ -79,7 +79,7 @@ printf "$boldBlue \n\tMean length:\t$(expr $totaLength / $numSeq)\tnt \n $noColo
 printf "$boldBlue \n\tMedian length:\t${medianLength}\t"' nt | Identifier:'"\t$medianID \n" | tee -a ${prefix}_length.out ;
 printf "$boldBlue \n\tMaximum length:\t${maxLength}\t"' nt | Identifier:'"\t$maxID \n" | tee -a ${prefix}_length.out ;
 printf "$boldBlue \n\tMinimum length:\t${minLength}\t"' nt | Identifier:'"\t$minID \n" | tee -a ${prefix}_length.out ;
-printf "$boldBlue \n\t95% confidence interval: $confIntervalSup - $confIntervalInf nt \n\n $noColor" | tee -a ${prefix}_length.out ;	# Invert inf and sup because ${prefix}_length.out is reverse sorted.
+printf "$boldBlue \n\t95%% confidence interval: $confIntervalSup - $confIntervalInf nt \n\n $noColor" | tee -a ${prefix}_length.out ;	# Invert inf and sup because ${prefix}_length.out is reverse sorted.
 
 
 ## POST-CLEANING. ##
