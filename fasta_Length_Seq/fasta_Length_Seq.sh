@@ -31,12 +31,12 @@ if [ -f ${prefix}_length.out ] ; then rm ${prefix}_length.out ; fi ;
 
 ## VARIABLES. ##
 
-prefix=${1%.*} ;													# Prefix of the FASTA file name.
+prefix=${1%.*} ;							# Prefix of the FASTA file name.
 # numSeq=$(grep '>' $1 | wc -l | tr -d ' ') ;
-numSeq=$(sed '/^$/d' $1 | grep -c '>') ;							# Number of sequences.
-numSeqLines=$(sed '/^$/d' $1 | grep -c -v '>') ;					# Number of lines of sequences.
-rankMedian=$(expr $(expr $numSeq + 1) / 2) ;						# '+1' avoids problems when "$numSeq" is odd.
-rank95confIntervalInf=$(expr 5 \* $numSeq / 100) ;					# Calculated at 5%.
+numSeq=$(sed '/^$/d' $1 | grep -c '>') ;				# Number of sequences.
+numSeqLines=$(sed '/^$/d' $1 | grep -c -v '>') ;			# Number of lines of sequences.
+rankMedian=$(expr $(expr $numSeq + 1) / 2) ;				# '+1' avoids problems when "$numSeq" is odd.
+rank95confIntervalInf=$(expr 5 \* $numSeq / 100) ;			# Calculated at 5%.
 rank95confIntervalSup=$(expr $numSeq - $rank95confIntervalInf) ;	# Calculated at 5%.
 
 
