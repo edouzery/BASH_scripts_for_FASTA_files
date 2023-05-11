@@ -1,6 +1,6 @@
 # BASH scripts for FASTA files
 
-This repository contains BASH scripts to **extract information** from FASTA files.
+This repository contains BASH scripts to **extract information** and **sequences** from FASTA files.
 
 ## fasta_Length_Seq.sh
 
