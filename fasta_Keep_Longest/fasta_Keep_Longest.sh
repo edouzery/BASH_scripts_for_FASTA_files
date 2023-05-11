@@ -25,8 +25,8 @@ fi ;
 
 ## VARIABLES. ##
 
-prefix=${1%.*} ;									# Prefix of the FASTA file name.
-numSeq=$(sed '/^$/d' $1 | grep -c '>') ;			# Number of sequences.
+prefix=${1%.*} ;					# Prefix of the FASTA file name.
+numSeq=$(sed '/^$/d' $1 | grep -c '>') ;		# Number of sequences.
 numSeqLines=$(sed '/^$/d' $1 | grep -c -v '>') ;	# Number of lines of sequences.
 
 
