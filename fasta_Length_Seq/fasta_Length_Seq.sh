@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## AUTHOR : Emmanuel Douzery, August 2014 | April 2016 | May 2017 | April 2023. ##
+## AUTHOR : Emmanuel Douzery, August 2014 | April 2016 | May 2017 | April 2023 | December 2025. ##
 
 ## What does this script do? It outputs the length of each sequence of the FASTA file, with associated statistics !
 
@@ -8,19 +8,35 @@
 
 ## FIRST WARNING. ##
 
-boldBlack='\033[0;30m' ;
-boldDarkGray='\033[1;30m' ;
-boldBlue='\033[1;94m' ;
-boldGreen='\033[1;32m' ;
-boldRed='\033[1;91m' ;
-noColor='\033[0m' ;
+# Evaluate if the output is a terminal or a file in order to (de)activate colors.
+if [ -t 1 ]; 
+	then	USE_COLOR=true ;	# For terminal only.
+	else    USE_COLOR=false ;	# Avoiding uninterpreted color codes in the output file.
+fi ;
 
- if [ -z $1 ] ;
- 	then printf "$boldRed \n Please provide a FASTA file (uniline) ! \n\n $noColor" ; exit ;
- 	else if [ ! -f $1 ] ;
- 		then printf "$boldRed \n This FASTA file does not exist in the current directory ! \n\n $noColor" ; exit ;
- 	fi ;
- fi ;
+# Defining the terminal color codes.
+if [ "$USE_COLOR" = true ]; 
+	then	boldBlack='\033[0;30m';
+			boldDarkGray='\033[1;30m' ;
+    		boldBlue='\033[1;94m';
+    		boldGreen='\033[1;32m';
+    		boldRed='\033[1;91m';
+    		noColor='\033[0m';
+	else
+    		boldBlack='';
+			boldDarkGray='' ;
+		    boldBlue='';
+		    boldGreen='';
+		    boldRed='';
+		    noColor='';
+fi ;
+
+if [ -z $1 ] ;
+	then printf "$boldRed \n Please provide a FASTA file (uniline) ! \n\n $noColor" ; exit ;
+	else if [ ! -f $1 ] ;
+		then printf "$boldRed \n This FASTA file does not exist in the current directory ! \n\n $noColor" ; exit ;
+	fi ;
+fi ;
 
 
 ## PRE-CLEANING. ##
