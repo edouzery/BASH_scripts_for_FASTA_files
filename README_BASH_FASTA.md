@@ -2,6 +2,11 @@
 
 This repository contains BASH scripts to **extract information** and **sequences** from FASTA files.
 
+## fasta_Composition_NT.sh
+
+Calculates the **number of nucleotide**, and other IUPAC character, occurrences in each (aligned or not) sequence of a FASTA file.
+Also detects potential **non-standard** (alien) characters.
+
 ## fasta_Distance.sh
 
 Compute **distance** descriptive statistics on pairs of DNA sequences from a FASTA file : **number of sites** (constant, variable, gapped), **transitions**, **transversions**, and differences between **each pair** of nucleotide.
