@@ -2,7 +2,7 @@
 
 ## AUTHOR : Emmanuel Douzery, Mar. 2017 | Mar. 2022 | Dec. 2025. ##
 
-## What does this script do? It calculate the nucleotide frequences of each (aligned or not) sequence of a FASTA file ! ##
+## What does this script do? It calculates the number of nucleotide (and other IUPAC character) occurrences in each (aligned or not) sequence of a FASTA file ! ##
 
 ## SYNTAX : ./fasta_Composition_NT.sh Fasta_file ;
 
