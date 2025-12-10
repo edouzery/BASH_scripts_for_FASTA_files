@@ -1,17 +1,33 @@
 #!/bin/bash
 
-## AUTHOR : Emmanuel Douzery, March 2023 | Nov. 2025.
+## AUTHOR : Emmanuel Douzery, Mar. 2023 | Nov. 2025.
 
 ## What does this script do? It calculates the distance between two sequences in terms of nucleotide exchangeabilities !
 
 ## FIRST WARNING. ##
 
-boldBlack='\033[0;30m' ;
-boldDarkGray='\033[1;30m' ;
-boldBlue='\033[1;94m' ;
-boldGreen='\033[1;32m' ;
-boldRed='\033[1;91m' ;
-noColor='\033[0m' ;
+# Evaluate if the output is a terminal or a file in order to (de)activate colors.
+if [ -t 1 ]; 
+	then	USE_COLOR=true ;	# For terminal only.
+	else    USE_COLOR=false ;	# Avoiding uninterpreted color codes in the output file.
+fi ;
+
+# Defining the terminal color codes.
+if [ "$USE_COLOR" = true ]; 
+	then	boldBlack='\033[0;30m';
+			boldDarkGray='\033[1;30m' ;
+    		boldBlue='\033[1;94m';
+    		boldGreen='\033[1;32m';
+    		boldRed='\033[1;91m';
+    		noColor='\033[0m';
+	else
+    		boldBlack='';
+			boldDarkGray='' ;
+		    boldBlue='';
+		    boldGreen='';
+		    boldRed='';
+		    noColor='';
+fi ;
 
 if [ -z "$1" ] ;
 	then	printf "$boldBlue \n Please provide a fasta file ! \n\n$noColor" ;
