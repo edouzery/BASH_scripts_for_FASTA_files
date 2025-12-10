@@ -25,3 +25,8 @@ Each sequence should be written on a single line.
 ```
     Sorry ... Your FASTA file is not UNILINE !
 ```
+
+## History ##
+
+* Dec. 2025 — Evaluate if the output is a terminal or a file in order to (de)activate colors. It avoids the output of uninterpreted characters.
+  
