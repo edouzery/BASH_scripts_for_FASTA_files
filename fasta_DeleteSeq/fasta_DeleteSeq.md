@@ -9,8 +9,10 @@ It deletes sequence(s) from an uniline FASTA file.
   `fasta_DeleteSeq.sh population_snp.fasta ;`
  
 ```js
-  
-xxx
+
+fasta_DeleteSeq.sh snp55119.fasta Rb7358 Rdc311 Rb7509 Rb3934 Rb7396 ;
+
+Sequence(s) deleted from the snp55119.fasta FASTA file ||| Rb7358 Rdc311 Rb7509 Rb3934 Rb7396 ||| 
 
 ```
 
